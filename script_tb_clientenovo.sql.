@@ -1,0 +1,40 @@
+use dbinfox;
+show tables;
+describe tb_cliente;
+drop table tb_cliente;
+create table tb_cliente(
+idcli int auto_increment primary key,
+cpfcli varchar(15) unique,
+nomecli varchar (50) not null,
+cep varchar (15) not null,
+tipo varchar (100) not null,
+logradouro varchar (50) not null,
+numero varchar (15) not null,
+bairro varchar (30) not null,
+cidade varchar (30) not null,
+uf  char (2) not null,
+fone1 varchar(15) not null,
+fone2 varchar(15),
+emailcli varchar (50) not null
+);
+
+describe tb_cliente;
+
+insert into tb_cliente(idcli,nomecli,cep,tipo,logradouro,numero,bairro,cidade,uf,fone1,emailcli)
+values (null, 'Pedro Maia','1111-111','Rua','Tuiuti','10','Tatuapé','São Paulo','SP','1111-1111','Pedro@gmail.com'),
+(null, 'João Abila','2222-222','Rua','`Bresser','20','Mooca','São Paulo','SP','2222-2222','joão@yahoo.com'),
+(null, 'Marta Figueredo','3333-333','Rua','Souza Filho','30','Sé','São Paulo','SP','3333-3333','marta@gmail.com'),
+(null, 'Fernando Paiva','4444-444','Avenida','Timotio','40','Americanopólis','São Paulo','SP','4444-4444','fernando@yahoo.com'),
+(null, 'Juliana Macedo','5555-555','Avenida','Juntas','50','Lapa','São Paulo','SP','4444-4444','Juliana@gmail.com');
+
+
+
+
+
+
+
+
+
+
+
+
